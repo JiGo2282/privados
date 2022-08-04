@@ -9,17 +9,17 @@ do {
     name = prompt('Please enter name.')
 } while (!name)
 
-btnClick.addEventListener('keyup', (e) => {
-    sendMessage(e.target.value)
+btnClick.addEventListener('click', (e) => {
+    //console.log(document.getElementById("textarea").value)
+    sendMessage(document.getElementById("textarea").value)
+    //document.getElementById("textarea").value = ''
 })
 
-// textarea.addEventListener('keyup', (e) => {
-
-
-//     if (e.key == 'Enter') {
-//         sendMessage(e.target.value)
-//     }
-// })
+textarea.addEventListener('keyup', (e) => {
+    //if (e.key == 'Enter') {
+    //sendMessage(e.target.value)
+    //}
+})
 
 function sendMessage(message) {
     let msg = {
